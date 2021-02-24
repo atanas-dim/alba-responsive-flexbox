@@ -229,11 +229,11 @@ footer {
 }
 
 .hero {
-    background-image: url("/assets/hero-cover.jpg");
+    background-image: url("../assets/hero-cover.jpg");
 }
 
 .hero-2 {
-    background-image: url("/assets/hero-cover-2.jpg");
+    background-image: url("../assets/hero-cover-2.jpg");
 }
 
 .hero-logo {
