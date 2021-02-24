@@ -223,11 +223,10 @@ footer {
     min-height: 400px;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 @media (orientation: portrait) {
@@ -245,11 +244,15 @@ footer {
     background-image: url("../assets/hero-cover-2.jpg");
 }
 
-.hero-logo {
+.hero-logo img{
     min-width: 150px;
     width: 15%;
     max-width: 200px;
     height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* ----- SERVICES ----- */
