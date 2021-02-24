@@ -216,16 +216,24 @@ footer {
 
 /* ----- HERO ----- */
 
-.hero, .hero-2 {
+.hero, 
+.hero-2 {
     width: 100%;
     height: calc(100vh - 70px);
     min-height: 400px;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position: center center;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (orientation: portrait) {
+    .hero, 
+    .hero-2 {
+        background-size: auto 100vh;
+    }
 }
 
 .hero {
