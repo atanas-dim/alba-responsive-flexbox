@@ -9,11 +9,11 @@
 const galleries = document.querySelectorAll('.project-gallery');
 const galleriesArr = Array.from(galleries); // Array is needed in order to use forEach later.
 
-const showSlide = function (slide) {
+function showSlide (slide) {
     slide.style.opacity = 1;
 } 
 
-const hideSlide = function (slide) {
+function hideSlide (slide) {
     slide.style.opacity = 0;
 } 
 
