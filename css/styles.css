@@ -104,6 +104,8 @@ header {
     z-index: 999;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+    border-bottom: solid 1px #070707;
+    /* padding: 0; */
 }
 
 .logo {
@@ -201,9 +203,9 @@ header nav ul li {
     height: 100%;
     position: absolute;
     top: 0;
-    left: 50%;
+    /* left: 50%; */
     object-fit: cover;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
 }
 
 .services,
@@ -229,19 +231,26 @@ footer {
     justify-content: center;
 }
 
-@media (orientation: portrait) {
-    .hero, 
-    .hero-2 {
-        background-size: auto 100vh;
-    }
-}
-
 .hero {
     background-image: url("../assets/hero-cover.jpg");
 }
 
 .hero-2 {
     background-image: url("../assets/hero-cover-2.jpg");
+}
+
+@supports ( -webkit-touch-callout : none) {
+    .hero, 
+    .hero-2 {
+        background-attachment: scroll;
+    }
+}
+    
+@supports not ( -webkit-touch-callout : none) {
+    .hero, 
+    .hero-2 {
+        background-attachment: fixed;
+    }
 }
 
 .hero-logo img{
@@ -302,6 +311,67 @@ footer {
     margin-bottom: 40px;
 }
 
+.project-gallery {
+    width: calc(100vw - 20px);
+    height: auto;
+    position: relative;
+}
+
+.slideshow-holder {
+    position: relative;
+    width: 100%;
+    height: 60vw;
+    margin-bottom: 10px;
+    background-color: #709D30;
+}
+
+.slide-holder {
+    width: calc(100vw - 40px);
+    height: 60vw;
+    overflow: hidden;
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.slide-holder:first-of-type{
+    opacity: 1;
+}
+
+.slide-holder img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prev,
+.next {
+    font-weight: 700;
+    background-color: #709D30;
+    padding: 10px 15px;
+    border: solid 1px #070707;
+    border-radius: 100px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prev {
+    border-radius: 70px 0 0 70px;
+}
+
+.next {
+    border-radius: 0 70px 70px 0;
+}
+
 /* ----- CONTACT ----- */
 
 .contact {
@@ -328,19 +398,24 @@ footer h5 {
 /* ----- RESPONSIVE ----- */
 
 @media only screen and (min-width: 760px) {
+
     .services,
     .about,
-    .projects {
+    .projects,
+    .contact {
         padding: 120px 40px;
     }
 
     .services figure {
         max-width: 240px;
     }
+
+    .slide-holder {
+        width: calc(100vw - 80px);
+    }
 }
 
 @media only screen and (min-width: 1000px) {
-
     .services figure {
         max-width: 220px;
     }
@@ -352,6 +427,10 @@ footer h5 {
     .description {
         width: 36%;
         margin-bottom: 0;
+    }
+
+    .projects .description {
+        margin-top: -58px;
     }
 
     .image {
@@ -368,6 +447,22 @@ footer h5 {
     .about .description,
     .contact .description {
         width: 48%;
+    }
+
+    .project-gallery {
+        width: 60%;
+        max-width: 720px;
+    }
+
+    .slide-holder {
+        width: 100%;
+        max-height: 540px;
+        height: 40vw;
+    }
+
+    .slideshow-holder {
+        max-height: 540px;
+        height: 40vw;
     }
 
 }
@@ -402,6 +497,10 @@ footer h5 {
     header nav ul li {
         margin: 0 auto 0 20px;
     }
+}
 
-    
+@media only screen and (min-width: 760px) {
+    header {
+        padding: 0 20px;
+    }
 }
