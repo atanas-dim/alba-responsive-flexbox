@@ -79,7 +79,7 @@ p {
 }
 
 main, footer {
-    max-width: 1600px;
+    max-width: 1400px;
     margin: auto;
 }
 
@@ -105,7 +105,6 @@ header {
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     border-bottom: solid 1px #070707;
-    /* padding: 0; */
 }
 
 .logo {
@@ -203,9 +202,7 @@ header nav ul li {
     height: 100%;
     position: absolute;
     top: 0;
-    /* left: 50%; */
     object-fit: cover;
-    /* transform: translateX(-50%); */
 }
 
 .services,
@@ -326,7 +323,6 @@ footer {
 }
 
 .slide-holder {
-    width: calc(100vw - 40px);
     height: 60vw;
     overflow: hidden;
     position: absolute;
@@ -408,10 +404,6 @@ footer h5 {
 
     .services figure {
         max-width: 240px;
-    }
-
-    .slide-holder {
-        width: calc(100vw - 80px);
     }
 }
 
