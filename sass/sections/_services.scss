@@ -1,0 +1,52 @@
+/* ----- SERVICES ----- */
+
+.services {
+    text-align: center;
+
+    h2 {
+        width: 100%;
+    }
+
+    .container {
+        .structural-services {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        
+            figure {
+                max-width: 260px;
+                margin: 0 auto 80px auto;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 760px) {
+
+    .services {
+        .container {
+            justify-content: center;
+    
+            .structural-services {
+                figure {
+                    max-width: 240px;
+                }
+            }
+        }
+    }
+    
+    
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .structural-services {
+        figure {
+            max-width: 220px;
+        } 
+    }
+    
+}

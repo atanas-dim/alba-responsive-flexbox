@@ -1,0 +1,90 @@
+/* ----- ALL SECTIONS----- */
+
+section {
+
+    .heading-align {
+        margin: auto;
+        width: fit-content;
+        width: intrinsic;
+        width: -moz-max-content;
+        width: -webkit-max-content;
+    }
+
+    .container {
+        
+
+        .description {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 40px;
+        
+            span {
+                font-weight: 700;
+            }
+        }
+
+        .image {
+            width: 100%;
+            padding-top: 75%;
+            overflow: hidden;
+            position: relative;
+        
+            img{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .reversed-row {
+        flex-direction: row-reverse;
+    }
+
+}
+
+
+.services,
+.about,
+.projects,
+.contact,
+footer {
+    padding: 90px 20px;
+}
+
+/* ----- RESPONSIVE ALL SECTIONS----- */
+
+@media only screen and (min-width: 760px) {
+
+    .services,
+    .about,
+    .projects,
+    .contact {
+        padding: 120px 40px;
+    }
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+    section {
+        .container {
+            justify-content: space-between;
+
+            .description {
+                width: 36%;
+                margin-bottom: 0;
+            }
+
+            .image {
+                width: 60%;
+                padding-top: 45%;
+            }
+        }
+
+    }
+
+}
+

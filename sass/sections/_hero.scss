@@ -1,0 +1,50 @@
+/* ----- HERO ----- */
+
+.hero, 
+.hero-2 {
+    width: 100%;
+    height: calc(100vh - 70px);
+    min-height: 400px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.hero {
+    background-image: url("../assets/hero-cover.jpg");
+
+    .hero-logo {
+        img{
+            min-width: 150px;
+            width: 15%;
+            max-width: 200px;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+}
+
+.hero-2 {
+    background-image: url("../assets/hero-cover-2.jpg");
+}
+
+@supports ( -webkit-touch-callout : none) {
+    .hero, 
+    .hero-2 {
+        background-attachment: scroll;
+    }
+}
+    
+@supports not ( -webkit-touch-callout : none) {
+    .hero, 
+    .hero-2 {
+        background-attachment: fixed;
+    }
+}

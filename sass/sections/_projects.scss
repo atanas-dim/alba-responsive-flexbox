@@ -1,0 +1,102 @@
+/* ----- PROJECTS ----- */
+
+.projects {
+    h1 {
+        margin-bottom: 120px;
+    }
+
+    .container {
+        margin-bottom: 120px;
+
+        .project-gallery {
+            width: calc(100vw - 20px);
+            height: auto;
+            position: relative;
+
+            .slideshow-holder {
+                position: relative;
+                width: 100%;
+                height: 60vw;
+                margin-bottom: 10px;
+                background-color: $color-alba-green;
+
+                .slide-holder {
+                    height: 60vw;
+                    overflow: hidden;
+                    position: absolute;
+                    transition: opacity 0.3s ease-in-out;
+                    opacity: 0;
+
+                    &:first-of-type{
+                        opacity: 1;
+                    }
+
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .controls {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .prev,
+                .next {
+                    font-weight: 700;
+                    background-color: $color-alba-green;
+                    padding: 10px 15px;
+                    border: solid 1px $color-black;
+                    border-radius: 100px;
+                    width: 48px;
+                    height: 48px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .prev {
+                    border-radius: 70px 0 0 70px;
+                }
+                
+                .next {
+                    border-radius: 0 70px 70px 0;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+    .projects {
+        .container {
+            .description {
+                margin-top: -58px;
+            }
+
+            .project-gallery {
+                width: 60%;
+                max-width: 720px;
+
+                .slideshow-holder {
+                    max-height: 540px;
+                    height: 40vw;
+
+                    .slide-holder {
+                        width: 100%;
+                        max-height: 540px;
+                        height: 40vw;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
